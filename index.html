@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geomarty genious</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-4xl font-bold text-center text-amber-400">
+        Geomarty genious Calculate
+      </h1>
+    </header>
+    <main>
+      <!-- container -->
+      <div class="flex m-4">
+        <!-- shape container -->
+        <div class="flex-1 grid grid-cols-3 gap-8 m-4">
+          <!-- first triangle card -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure><img src="/images/triangle.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Triangle</h2>
+              <p>Area : 0.5 x base x height</p>
+              <div>
+                <input
+                  class="border w-24"
+                  type="text"
+                  name=""
+                  id="base-inputField"
+                  placeholder="Base "
+                />cm
+                <input
+                  class="border w-24"
+                  type="text"
+                  name=""
+                  id="height-inputField"
+                  placeholder="height"
+                />cm
+              </div>
+              <p>Area:<span id="display-triangle" class="font-bold"></span> cm<sup>2</sup></p>
+              <div class="card-actions">
+                <button
+                  onclick="calculateTryangle()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd rectangle card -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure><img src="/images/rectangle.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Rectangle</h2>
+              <p>Area :Width x Length</p>
+              <div>
+                <input
+                  class="border w-24"
+                  type="text"
+                  name=""
+                  id="base-rectangle"
+                  placeholder="Base "
+                />cm
+                <input
+                  class="border w-24"
+                  type="text"
+                  name=""
+                  id="height-rectangle"
+                  placeholder="height"
+                />cm
+              </div>
+              <p>Area:<span id="display-rectangle" class="font-bold"></span> cm<sup>2</sup></p>
+              <div class="card-actions">
+                <button
+                  onclick="rectangleCalculate  ()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- 3rd  -->
+          <div class="card bg-base-100 shadow-xl">
+            <figure>
+              <img
+                src="/images/parallelogram.png"
+                alt="Shoes"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes!</h2>
+              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary">Buy Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- area calculator -->
+        <div class="w-[400px] border text-center">
+          <h1>Area Calculator</h1>
+        </div>
+      </div>
+    </main>
+    <script src="calculate.js"></script>
+  </body>
+</html>
